@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import as_declarative,declared_attr
 class Base:
     id : Any
     __name__ :str
+    __table_args__ = {'extend_existing': True}
 
     @declared_attr
     def __tablename__(cls)->str:
