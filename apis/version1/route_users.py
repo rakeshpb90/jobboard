@@ -6,7 +6,7 @@ from db.session import get_db
 from db.repository.users import create_new_user
 
 
-router = APIRouter(include_in_schema=False)
+router = APIRouter()
 
 @router.post("/users/")
 def create_user(user: UserCreate, db: Session=Depends(get_db)):
